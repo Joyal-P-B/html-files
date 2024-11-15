@@ -1,0 +1,40 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+    ImageView para;
+    ImageView surya;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        para=findViewById(R.id.loki10);
+        surya=findViewById(R.id.loki11);
+        para.setOnClickListener(this);
+        surya.setOnClickListener(this);
+    }
+
+    public void bucky(View view) {
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view==para){
+            para.setVisibility(View.GONE);
+            surya.setVisibility((View.VISIBLE));
+        }
+        else{
+            surya.setVisibility(View.GONE);
+        }
+        para.setVisibility(View.VISIBLE);
+
+    }
+
+}
